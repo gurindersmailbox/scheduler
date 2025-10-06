@@ -1,0 +1,30 @@
+<head></head>
+<body>
+
+  <style>
+        .slds-visual-picker_vertical .slds-visual-picker__figure {
+            height: inherit !important;
+        }
+
+        .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+            display: inline-flex !important;
+        }
+</style>
+
+<script src="https://singhgurin-221223-221-demo.my.site.com/lightning/lightning.out.js"></script>
+
+<script>
+    $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+        function() {                  // Callback once framework and app load
+            $Lightning.createComponent(
+                "lightning:flow",    // top-level component of your app
+                { },    // attributes to set on the component when created
+                "lexcontainer",    // the DOM location to insert the component
+                function(component) {            // API name of the Flow
+                    component.startFlow("Book_Appointment_from_URL_Custom");
+                }
+            );
+        },    'https://singhgurin-221223-221-demo.my.site.com/miawcmp/s'  // Site endpoint
+    );
+</script>
+</body>
